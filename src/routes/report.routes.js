@@ -1,5 +1,5 @@
 import express from 'express';
-import { generateReport, downloadReport } from '../controllers/report.controller.js';
+import { generateReport, downloadReport, getSiteList } from '../controllers/report.controller.js';
 
 const router = express.Router();
 
@@ -14,5 +14,10 @@ router.get('/:uid/:id', generateReport);
 // id: Submission ID
 // Returns: JSON response with file path (saves to disk)
 router.get('/download/:uid/:id', downloadReport);
+
+// GET /generate/sites/:uid
+// uid: Kobo asset UID
+// Returns: JSON array of all sites with siteid and sitename
+router.get('/sites/:uid', getSiteList);
 
 export default router;

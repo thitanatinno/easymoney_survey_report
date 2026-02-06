@@ -59,6 +59,59 @@ export async function fetchSubmission(uid, id) {
 }
 
 /**
+ * Fetches all submissions from KoboToolbox API
+ * @param {string} uid - Asset UID
+ * @returns {Promise<Object>} - API response with results array
+ */
+export async function fetchAllSubmissions(uid) {
+  if (!config.apiToken) {
+    throw new Error('KOBO_API_TOKEN is not configured');
+  }
+
+  const url = `${config.apiUrl}/assets/${uid}/data/?format=json`;
+
+  try {
+    const response = await axios.get(url, {
+      headers: {
+        'Authorization': `Token ${config.apiToken}`
+      },
+      timeout: config.timeout
+    });
+
+    console.log('\n📥 ALL SUBMISSIONS RESPONSE:');
+    console.log('Response type:', typeof response.data);
+    console.log('Count:', response.data.count);
+    console.log('Results length:', response.data.results?.length);
+    
+    if (!response.data || !response.data.results) {
+      const error = new Error('Invalid response format');
+      error.statusCode = 500;
+      throw error;
+    }
+
+    console.log('\n✅ Retrieved', response.data.results.length, 'submissions');
+    
+    return response.data;
+  } catch (error) {
+    if (error.response) {
+      // Kobo API returned an error
+      const koboError = new Error(`Kobo API error: ${error.response.status} - ${error.response.statusText}`);
+      koboError.isKoboError = true;
+      koboError.statusCode = error.response.status;
+      throw koboError;
+    } else if (error.request) {
+      // Request made but no response
+      const networkError = new Error('No response from KoboToolbox API');
+      networkError.isKoboError = true;
+      throw networkError;
+    } else {
+      // Pass through other errors
+      throw error;
+    }
+  }
+}
+
+/**
  * Downloads image from attachment URL
  * @param {string} url - Download URL from attachment
  * @returns {Promise<Buffer>} - Image buffer

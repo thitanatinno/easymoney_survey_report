@@ -1,4 +1,4 @@
-import { fetchSubmission } from '../services/kobo.service.js';
+import { fetchSubmission, fetchAllSubmissions } from '../services/kobo.service.js';
 import { generateExcelReport } from '../services/report.service.js';
 import { saveExcelFile } from '../utils/excel/fileWriter.js';
 
@@ -103,6 +103,50 @@ export async function downloadReport(req, res, next) {
 
   } catch (error) {
     console.error('Error downloading report:', error);
+    next(error);
+  }
+}
+
+/**
+ * Controller for getting list of sites from all submissions
+ * GET /sites/:uid
+ */
+export async function getSiteList(req, res, next) {
+  try {
+    const { uid } = req.params;
+
+    // Validate parameters
+    if (!uid) {
+      return res.status(400).json({
+        error: 'Bad Request',
+        message: 'Asset UID parameter is required'
+      });
+    }
+
+    console.log('\n' + '='.repeat(60));
+    console.log(`📋 FETCHING SITE LIST`);
+    console.log(`Asset UID: ${uid}`);
+    console.log('='.repeat(60));
+
+    // Fetch all submissions from Kobo
+    console.log('\n⏳ Fetching all submissions from KoboToolbox...');
+    const response = await fetchAllSubmissions(uid);
+
+    // Extract siteid and sitename from each submission
+    const sites = response.results.map(submission => ({
+      siteid: submission._id,
+      sitename: submission['group_hh1ii99/text_pl66z95'] || null
+    }));
+
+    console.log('\n✅ SUCCESS!');
+    console.log(`📊 Total sites: ${sites.length}`);
+    console.log('='.repeat(60) + '\n');
+
+    // Return JSON response
+    res.status(200).json(sites);
+
+  } catch (error) {
+    console.error('Error fetching site list:', error);
     next(error);
   }
 }
