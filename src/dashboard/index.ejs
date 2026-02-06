@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบสร้างรีพอร์ตสำรวจหน้างานอัตโนมัติ</title>
+    <style><%- css %></style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="<%= logoBase64 %>" alt="INNO Logo" class="logo">
+            <h1>ระบบสร้างรีพอร์ตสำรวจหน้างานอัตโนมัติ</h1>
+            <p class="subtitle">เลือกไซต์เพื่อสร้างรายงาน</p>
+            <div class="uid-badge">UID: <%= uid %></div>
+        </div>
+
+        <form id="reportForm">
+            <div class="form-group">
+                <label for="siteSelect">เลือกไซต์</label>
+                <select id="siteSelect" required disabled>
+                    <option value="">กำลังโหลดข้อมูลไซต์...</option>
+                </select>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn-primary" id="generateBtn" disabled>
+                    สร้างรายงาน
+                </button>
+            </div>
+        </form>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>กำลังสร้างรายงาน...</p>
+        </div>
+
+        <div class="message" id="message"></div>
+    </div>
+
+    <script>
+        const uid = '<%= uid %>';
+    </script>
+    <script><%- js %></script>
+</body>
+</html>

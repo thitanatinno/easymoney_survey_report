@@ -12,9 +12,9 @@ const __dirname = path.dirname(__filename);
  * @param {Object} workbook - ExcelJS workbook
  * @param {Object} data - Normalized data
  */
+
 export async function renderCoverSheet(worksheet, workbook, data) {
   const { general, meta } = data;
-
   // Set column widths
   worksheet.getColumn(1).width = 2;
   worksheet.getColumn(2).width = 12;
