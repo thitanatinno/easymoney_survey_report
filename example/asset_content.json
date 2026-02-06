@@ -1,0 +1,662 @@
+{
+  "kind": "asset.content",
+  "uid_asset": "aj3WDbyQqWkw6qSrV2feVo",
+  "data": {
+    "survey": [
+      {
+        "name": "start",
+        "type": "start",
+        "$kuid": "Pt6yjPmwE",
+        "$xpath": "start",
+        "$autoname": "start"
+      },
+      {
+        "name": "end",
+        "type": "end",
+        "$kuid": "krQU3a4sQ",
+        "$xpath": "end",
+        "$autoname": "end"
+      },
+      {
+        "name": "group_hh1ii99",
+        "type": "begin_group",
+        "$kuid": "ni5js84",
+        "$xpath": "group_hh1ii99",
+        "required": "false",
+        "$autoname": "group_hh1ii99",
+        "label": "ข้อมูลทั่วไป (General data)"
+      },
+      {
+        "type": "text",
+        "$kuid": "aa8ps42",
+        "$xpath": "group_hh1ii99/text_aa8ps42",
+        "required": "false",
+        "$autoname": "text_aa8ps42",
+        "label": "ชื่อโครงการ/หน้างาน"
+      },
+      {
+        "type": "geopoint",
+        "$kuid": "et0pz50",
+        "$xpath": "group_hh1ii99/geopoint_et0pz50",
+        "required": "false",
+        "$autoname": "geopoint_et0pz50",
+        "label": "ที่อยู่หน้างาน"
+      },
+      {
+        "type": "text",
+        "$kuid": "pl66z95",
+        "$xpath": "group_hh1ii99/text_pl66z95",
+        "required": "false",
+        "$autoname": "text_pl66z95",
+        "label": "ที่ตั้งโครงการ/หน้างาน"
+      },
+      {
+        "type": "text",
+        "$kuid": "dv4na03",
+        "$xpath": "group_hh1ii99/text_dv4na03",
+        "required": "false",
+        "$autoname": "text_dv4na03",
+        "label": "ชื่อผู้สำรวจ"
+      },
+      {
+        "type": "text",
+        "$kuid": "rw8oa22",
+        "$xpath": "group_hh1ii99/text_rw8oa22",
+        "required": "false",
+        "$autoname": "text_rw8oa22",
+        "label": "เบอร์โทรผู้ติดต่อหน้างาน"
+      },
+      {
+        "type": "datetime",
+        "$kuid": "am35s23",
+        "$xpath": "group_hh1ii99/datetime_am35s23",
+        "required": "false",
+        "$autoname": "datetime_am35s23",
+        "label": "วันที/เวลาเริ่มสำรวจ"
+      },
+      {
+        "type": "end_group",
+        "$kuid": "/ni5js84"
+      },
+      {
+        "name": "group_gs9vj55",
+        "type": "begin_group",
+        "$kuid": "in8jb30",
+        "$xpath": "group_gs9vj55",
+        "required": "false",
+        "$autoname": "group_gs9vj55",
+        "label": "สำรวจภายนอกอาคาร/ทางเข้า"
+      },
+      {
+        "type": "image",
+        "$kuid": "bn2pa18",
+        "$xpath": "group_gs9vj55/image_bn2pa18",
+        "required": "false",
+        "$autoname": "image_bn2pa18",
+        "parameters": "max-pixels=2048",
+        "label": "ถ่ายรูปถนนทางเข้าโครงการ/หน้างาน"
+      },
+      {
+        "name": "group_iz7ky31",
+        "type": "begin_group",
+        "$kuid": "zp9hv68",
+        "$xpath": "group_gs9vj55/group_iz7ky31",
+        "required": "false",
+        "$autoname": "group_iz7ky31",
+        "label": "Grid Connection and Protection detail"
+      },
+      {
+        "type": "image",
+        "$kuid": "ll8bh87",
+        "$xpath": "group_gs9vj55/group_iz7ky31/PEA_MEA_Meter",
+        "required": "false",
+        "$autoname": "PEA_MEA_Meter",
+        "parameters": "max-pixels=2048",
+        "label": "PEA/MEA Meter"
+      },
+      {
+        "type": "select_multiple of3rj27",
+        "$kuid": "sa5eg72",
+        "$xpath": "group_gs9vj55/group_iz7ky31/Electrical_Authority",
+        "required": "false",
+        "$autoname": "Electrical_Authority",
+        "label": "Electrical Authority"
+      },
+      {
+        "type": "select_multiple mj6qe08",
+        "$kuid": "fi8xh72",
+        "$xpath": "group_gs9vj55/group_iz7ky31/AMR_Meter",
+        "required": "false",
+        "$autoname": "AMR_Meter",
+        "label": "AMR Meter"
+      },
+      {
+        "type": "text",
+        "$kuid": "rx3mo41",
+        "$xpath": "group_gs9vj55/group_iz7ky31/AMR_Meter_USER_Password_",
+        "required": "false",
+        "$autoname": "AMR_Meter_USER_Password_",
+        "label": "AMR Meter ( ใส่ USER เเละ Password ถ้ามี) "
+      },
+      {
+        "type": "text",
+        "$kuid": "xj5az30",
+        "$xpath": "group_gs9vj55/group_iz7ky31/PEA_MEA_Incoming_kV_V",
+        "required": "false",
+        "$autoname": "PEA_MEA_Incoming_kV_V",
+        "label": "PEA/MEA Incoming (kV,V)"
+      },
+      {
+        "type": "select_multiple ep4bb36",
+        "$kuid": "kn3gu17",
+        "$xpath": "group_gs9vj55/group_iz7ky31/Transformer",
+        "required": "false",
+        "$autoname": "Transformer",
+        "label": "Transformer"
+      },
+      {
+        "type": "text",
+        "$kuid": "qg4bf98",
+        "$xpath": "group_gs9vj55/group_iz7ky31/Tranformer_size_kVA",
+        "required": "false",
+        "$autoname": "Tranformer_size_kVA",
+        "label": "Tranformer size (kVA)"
+      },
+      {
+        "type": "text",
+        "$kuid": "ru2tq57",
+        "$xpath": "group_gs9vj55/group_iz7ky31/connection_Point_Micro_Inverter_Solar",
+        "required": "false",
+        "$autoname": "connection_Point_Micro_Inverter_Solar",
+        "label": "connection Point (Micro Inverter ถึงตู้ Solar)"
+      },
+      {
+        "type": "text",
+        "$kuid": "ru2tq57",
+        "$xpath": "group_gs9vj55/group_iz7ky31/connection_Point_Solar_MDB",
+        "required": "false",
+        "$autoname": "connection_Point_Solar_MDB",
+        "label": "connection Point (ตู้ Solar ถึงตู้เมน MDB)"
+      },
+      {
+        "type": "end_group",
+        "$kuid": "/zp9hv68"
+      },
+      {
+        "type": "image",
+        "$kuid": "ao2ed61",
+        "$xpath": "group_gs9vj55/image_ao2ed61",
+        "required": "false",
+        "$autoname": "image_ao2ed61",
+        "parameters": "max-pixels=2048",
+        "label": "ถ่ายรูปพื้นที่วางของ/ลานจอดรถ"
+      },
+      {
+        "type": "text",
+        "$kuid": "tm4fp17",
+        "$xpath": "group_gs9vj55/text_tm4fp17",
+        "required": "false",
+        "$autoname": "text_tm4fp17",
+        "label": "ทิศทางของร้าน/หน้างาน "
+      },
+      {
+        "type": "image",
+        "$kuid": "rc7iz33",
+        "$xpath": "group_gs9vj55/image_rc7iz33",
+        "required": "false",
+        "$autoname": "image_rc7iz33",
+        "parameters": "max-pixels=2048",
+        "label": "ถ่ายรูปด้านนอกอาคาร \"ทุกด้าน\" จากด้านล่าง (เเนบรูป: ด้านหน้า)"
+      },
+      {
+        "type": "image",
+        "$kuid": "zd8zv68",
+        "$xpath": "group_gs9vj55/image_zd8zv68",
+        "required": "false",
+        "$autoname": "image_zd8zv68",
+        "parameters": "max-pixels=2048",
+        "label": "ถ่ายรูปด้านนอกอาคาร \"ทุกด้าน\" จากด้านล่าง (เเนบรูป: ด้านซ้าย)"
+      },
+      {
+        "type": "image",
+        "$kuid": "qp9jo49",
+        "$xpath": "group_gs9vj55/image_qp9jo49",
+        "required": "false",
+        "$autoname": "image_qp9jo49",
+        "parameters": "max-pixels=2048",
+        "label": "ถ่ายรูปด้านนอกอาคาร \"ทุกด้าน\" จากด้านล่าง (เเนบรูป: ด้านขวา)"
+      },
+      {
+        "type": "image",
+        "$kuid": "sj5tk19",
+        "$xpath": "group_gs9vj55/image_sj5tk19",
+        "required": "false",
+        "$autoname": "image_sj5tk19",
+        "parameters": "max-pixels=2048",
+        "label": "ถ่ายรูปด้านนอกอาคาร \"ทุกด้าน\" จากด้านล่าง (เเนบรูป: ด้านหลัง)"
+      },
+      {
+        "type": "end_group",
+        "$kuid": "/in8jb30"
+      },
+      {
+        "name": "group_li3tn67",
+        "type": "begin_group",
+        "$kuid": "uh0qz49",
+        "$xpath": "group_li3tn67",
+        "required": "false",
+        "$autoname": "group_li3tn67",
+        "label": "ห้องไฟ"
+      },
+      {
+        "type": "image",
+        "$kuid": "jz8sc99",
+        "$xpath": "group_li3tn67/image_jz8sc99",
+        "required": "false",
+        "$autoname": "image_jz8sc99",
+        "parameters": "max-pixels=2048",
+        "label": "ถ่ายภาพห้องไฟ (มุมกว้าง)"
+      },
+      {
+        "type": "image",
+        "$kuid": "if5sx77",
+        "$xpath": "group_li3tn67/image_if5sx77",
+        "required": "false",
+        "$autoname": "image_if5sx77",
+        "parameters": "max-pixels=2048",
+        "label": "ภาพถ่าย เบรคเกอร์ที่เห็นหนาดเเอมพ์ "
+      },
+      {
+        "type": "select_multiple cn5pr04",
+        "$kuid": "nr0vm51",
+        "$xpath": "group_li3tn67/_Single_line_diagram_SLD",
+        "required": "false",
+        "$autoname": "_Single_line_diagram_SLD",
+        "label": "มี Single line diagram (SLD)  "
+      },
+      {
+        "type": "image",
+        "$kuid": "vs5az59",
+        "$xpath": "group_li3tn67/_Single_line_diagram_SLD_",
+        "required": "false",
+        "$autoname": "_Single_line_diagram_SLD_",
+        "parameters": "max-pixels=2048",
+        "label": " มี Single line diagram (SLD)   (ถ้ามีเเนบภาพประกอบ)"
+      },
+      {
+        "type": "text",
+        "$kuid": "as7eo90",
+        "$xpath": "group_li3tn67/Main_breaker_size_AT_AF_V_kA",
+        "required": "false",
+        "$autoname": "Main_breaker_size_AT_AF_V_kA",
+        "label": "Main breaker size (AT, AF, V, kA)"
+      },
+      {
+        "type": "text",
+        "$kuid": "jr9jm62",
+        "$xpath": "group_li3tn67/Main_MDB_cable_AC_or_Other_Size_mm",
+        "required": "false",
+        "$autoname": "Main_MDB_cable_AC_or_Other_Size_mm",
+        "label": "Main MDB cable ( AC Cable THW or Other , Size (mm²)) "
+      },
+      {
+        "type": "image",
+        "$kuid": "ty2gt36",
+        "$xpath": "group_li3tn67/_CT",
+        "required": "false",
+        "$autoname": "_CT",
+        "parameters": "max-pixels=2048",
+        "label": "จุดติดตั้ง CT"
+      },
+      {
+        "type": "integer",
+        "$kuid": "gd79u01",
+        "$xpath": "group_li3tn67/Feeder_MDB_",
+        "required": "false",
+        "$autoname": "Feeder_MDB_",
+        "label": "Feeder MDB ( จำนวน )"
+      },
+      {
+        "type": "select_multiple ps8xw76",
+        "$kuid": "za21v69",
+        "$xpath": "group_li3tn67/Main_Busbar_MDB",
+        "required": "false",
+        "$autoname": "Main_Busbar_MDB",
+        "label": "Main Busbar MDB"
+      },
+      {
+        "type": "text",
+        "$kuid": "bh56r84",
+        "$xpath": "group_li3tn67/_MDB_Ground_Cable_er_Size_mm_Ground",
+        "required": "false",
+        "$autoname": "_MDB_Ground_Cable_er_Size_mm_Ground",
+        "label": "ระบบกราวด์เดิมที่มีอยู่เเล้วของตู้ MDB ( Ground Cable(THW or Other), Size (mm²), Ground)"
+      },
+      {
+        "type": "end_group",
+        "$kuid": "/uh0qz49"
+      },
+      {
+        "name": "group_gr7hn33",
+        "type": "begin_group",
+        "$kuid": "hj1df81",
+        "$xpath": "group_gr7hn33",
+        "required": "false",
+        "$autoname": "group_gr7hn33",
+        "label": "MDB"
+      },
+      {
+        "type": "text",
+        "$kuid": "pk9qi18",
+        "$xpath": "group_gr7hn33/AT",
+        "required": "false",
+        "$autoname": "AT",
+        "label": "AT "
+      },
+      {
+        "type": "text",
+        "$kuid": "oi3jb38",
+        "$xpath": "group_gr7hn33/Power_R_S_T_Total_kW",
+        "required": "false",
+        "$autoname": "Power_R_S_T_Total_kW",
+        "label": "Power (R, S, T)  Total kW"
+      },
+      {
+        "type": "text",
+        "$kuid": "xf8nm78",
+        "$xpath": "group_gr7hn33/Ampere_R_S_T_A",
+        "required": "false",
+        "$autoname": "Ampere_R_S_T_A",
+        "label": "Ampere (R, S, T)  A."
+      },
+      {
+        "type": "text",
+        "$kuid": "py56q61",
+        "$xpath": "group_gr7hn33/Voltage_R_S_T_and_RN_SN_TN_V",
+        "required": "false",
+        "$autoname": "Voltage_R_S_T_and_RN_SN_TN_V",
+        "label": "Voltage (R, S, T and RN , SN ,TN )  V."
+      },
+      {
+        "type": "image",
+        "$kuid": "on0xw26",
+        "$xpath": "group_gr7hn33/_Tie_In",
+        "required": "false",
+        "$autoname": "_Tie_In",
+        "parameters": "max-pixels=2048",
+        "label": "จุด Tie-In"
+      },
+      {
+        "type": "image",
+        "$kuid": "hi5wu55",
+        "$xpath": "group_gr7hn33/_rounter_intrernet_",
+        "required": "false",
+        "$autoname": "_rounter_intrernet_",
+        "parameters": "max-pixels=2048",
+        "label": "จุด rounter intrernet (สามารถโยงมาที่ห้องไฟยังไงได้บ้าง) "
+      },
+      {
+        "type": "text",
+        "$kuid": "pm6wp23",
+        "$xpath": "group_gr7hn33/_rounter_intrernet__001",
+        "required": "false",
+        "$autoname": "_rounter_intrernet__001",
+        "label": "จุด rounter intrernet (สามารถโยงมาที่ห้องไฟยังไงได้บ้าง) อธิบายเพิ่มเติม"
+      },
+      {
+        "type": "end_group",
+        "$kuid": "/hj1df81"
+      },
+      {
+        "name": "group_ns6fp26",
+        "type": "begin_repeat",
+        "$kuid": "ig8tv64",
+        "$xpath": "group_ns6fp26",
+        "required": "false",
+        "$autoname": "group_ns6fp26",
+        "label": "ระยะเดินสายจากตู้ไฟไปพื้นที่การติดตั้ง (แต่ละห้อง)"
+      },
+      {
+        "type": "text",
+        "$kuid": "xh3dg50",
+        "$xpath": "group_ns6fp26/_m_",
+        "required": "false",
+        "$autoname": "_m_",
+        "label": "ระยะเดินสายไฟโดยประมาณ ในการเดินสายไปขึ้นไปติดตั้งโซล่าห์ (m) แต่ละห้อง"
+      },
+      {
+        "type": "image",
+        "$kuid": "ki1nl22",
+        "$xpath": "group_ns6fp26/image_ki1nl22",
+        "required": "false",
+        "$autoname": "image_ki1nl22",
+        "parameters": "max-pixels=2048",
+        "hint": "โดยให้ขีดเส้นเดินสาย",
+        "label": "รูปถ่ายเเนวเดินสายจากตู้ไฟไปพื้นที่การติดตั้งโซล่าห์ แต่ละห้อง"
+      },
+      {
+        "type": "end_repeat",
+        "$kuid": "/ig8tv64"
+      },
+      {
+        "name": "group_ib9gq22",
+        "type": "begin_group",
+        "$kuid": "lb8vo42",
+        "$xpath": "group_ib9gq22",
+        "required": "false",
+        "$autoname": "group_ib9gq22",
+        "label": "ข้อมูลหลังคาก่อนการติดตั้งsolar"
+      },
+      {
+        "type": "image",
+        "$kuid": "zz3zj61",
+        "$xpath": "group_ib9gq22/image_zz3zj61",
+        "required": "false",
+        "$autoname": "image_zz3zj61",
+        "parameters": "max-pixels=2048",
+        "label": "รูปถ่ายโครงสร้างใต้ฝ้า (ถ้ามี)"
+      },
+      {
+        "type": "image",
+        "$kuid": "eu9in14",
+        "$xpath": "group_ib9gq22/image_eu9in14",
+        "required": "false",
+        "$autoname": "image_eu9in14",
+        "parameters": "max-pixels=2048",
+        "label": "รูปถ่ายทางขึ้นดาดฟ้า"
+      },
+      {
+        "name": "group_fe64a97",
+        "type": "begin_repeat",
+        "$kuid": "gu2ae31",
+        "$xpath": "group_ib9gq22/group_fe64a97",
+        "required": "false",
+        "$autoname": "group_fe64a97",
+        "label": "ถ่ายภาพดาดฟ้าแต่ละด้าน"
+      },
+      {
+        "type": "image",
+        "$kuid": "vq1vq04",
+        "$xpath": "group_ib9gq22/group_fe64a97/image_vq1vq04",
+        "required": "false",
+        "$autoname": "image_vq1vq04",
+        "parameters": "max-pixels=2048",
+        "label": "แนบรูปดาดฟ้า "
+      },
+      {
+        "type": "integer",
+        "$kuid": "ac24n13",
+        "$xpath": "group_ib9gq22/group_fe64a97/integer_ac24n13",
+        "required": "false",
+        "$autoname": "integer_ac24n13",
+        "label": "ระบุขนาดด้านของดาดฟ้า/หลังคา"
+      },
+      {
+        "type": "end_repeat",
+        "$kuid": "/gu2ae31"
+      },
+      {
+        "type": "image",
+        "$kuid": "ax4lw86",
+        "$xpath": "group_ib9gq22/image_ax4lw86",
+        "required": "false",
+        "$autoname": "image_ax4lw86",
+        "parameters": "max-pixels=2048",
+        "label": "จุดก๊อกน้ำบนดาดฟ้าหรือที่ใกล้ที่สุด"
+      },
+      {
+        "name": "group_hn9xa37",
+        "type": "begin_repeat",
+        "$kuid": "fq73q17",
+        "$xpath": "group_ib9gq22/group_hn9xa37",
+        "required": "false",
+        "$autoname": "group_hn9xa37",
+        "label": "ตรวจสอบการติดตั้งระบบป้องกันฟ้าผ่า"
+      },
+      {
+        "type": "select_multiple qf1lv66",
+        "$kuid": "cp1kc67",
+        "$xpath": "group_ib9gq22/group_hn9xa37/select_multiple_cp1kc67",
+        "required": "false",
+        "$autoname": "select_multiple_cp1kc67",
+        "label": "รูปเเบบการติดตั้งระบบป้องกันฟ้าผ่า"
+      },
+      {
+        "type": "image",
+        "$kuid": "mj9ul94",
+        "$xpath": "group_ib9gq22/group_hn9xa37/image_mj9ul94",
+        "required": "false",
+        "$autoname": "image_mj9ul94",
+        "parameters": "max-pixels=2048",
+        "label": "ุถ่ายรูป/ระบบป้องกันฟ้าผ่า"
+      },
+      {
+        "type": "end_repeat",
+        "$kuid": "/fq73q17"
+      },
+      {
+        "name": "group_oi1vu72",
+        "type": "begin_repeat",
+        "$kuid": "cu8jz13",
+        "$xpath": "group_ib9gq22/group_oi1vu72",
+        "required": "false",
+        "$autoname": "group_oi1vu72",
+        "label": "ข้อมูลอื่นๆเพิ่มเติม"
+      },
+      {
+        "type": "file",
+        "$kuid": "es9un79",
+        "$xpath": "group_ib9gq22/group_oi1vu72/file_es9un79",
+        "required": "false",
+        "$autoname": "file_es9un79",
+        "label": "ข้อมูลอื่นๆ (ขอเพิ่มเติม) เเบบอาคาร"
+      },
+      {
+        "type": "image",
+        "$kuid": "cn7fr55",
+        "$xpath": "group_ib9gq22/group_oi1vu72/image_cn7fr55",
+        "required": "false",
+        "$autoname": "image_cn7fr55",
+        "parameters": "max-pixels=2048",
+        "label": "ข้อมูลอื่นๆ (ขอเพิ่มเติม) เเบบอาคาร"
+      },
+      {
+        "type": "end_repeat",
+        "$kuid": "/cu8jz13"
+      },
+      {
+        "type": "end_group",
+        "$kuid": "/lb8vo42"
+      }
+    ],
+    "choices": [
+      {
+        "name": "pea",
+        "$kuid": "ws6f6YiBi",
+        "list_name": "of3rj27",
+        "$autovalue": "pea",
+        "label": "PEA"
+      },
+      {
+        "name": "mea",
+        "$kuid": "akdNzSnpc",
+        "list_name": "of3rj27",
+        "$autovalue": "mea",
+        "label": "MEA"
+      },
+      {
+        "name": "yes",
+        "$kuid": "cHLUQOll5",
+        "list_name": "mj6qe08",
+        "$autovalue": "yes",
+        "label": "Yes"
+      },
+      {
+        "name": "no",
+        "$kuid": "YJVfnLuGt",
+        "list_name": "mj6qe08",
+        "$autovalue": "no",
+        "label": "No"
+      },
+      {
+        "name": "yes",
+        "$kuid": "IACIiPbT8",
+        "list_name": "ep4bb36",
+        "$autovalue": "yes",
+        "label": "Yes"
+      },
+      {
+        "name": "no",
+        "$kuid": "X8pwy2WFu",
+        "list_name": "ep4bb36",
+        "$autovalue": "no",
+        "label": "No"
+      },
+      {
+        "name": "yes",
+        "$kuid": "Z4XXsqAJd",
+        "list_name": "cn5pr04",
+        "$autovalue": "yes",
+        "label": "YES "
+      },
+      {
+        "name": "no",
+        "$kuid": "r82hSuKJP",
+        "list_name": "cn5pr04",
+        "$autovalue": "no",
+        "label": "No"
+      },
+      {
+        "name": "yes",
+        "$kuid": "YScvZNWsu",
+        "list_name": "ps8xw76",
+        "$autovalue": "yes",
+        "label": "Yes"
+      },
+      {
+        "name": "no",
+        "$kuid": "nRWladbFo",
+        "list_name": "ps8xw76",
+        "$autovalue": "no",
+        "label": "No"
+      },
+      {
+        "name": "early_streamer_emission__ese",
+        "$kuid": "eJ80Tv23r",
+        "list_name": "qf1lv66",
+        "$autovalue": "early_streamer_emission__ese",
+        "label": "Early Streamer Emission (ESE)"
+      },
+      {
+        "name": "_",
+        "$kuid": "yt2EZhren",
+        "list_name": "qf1lv66",
+        "$autovalue": "_",
+        "label": "ฟาราเดย์"
+      }
+    ],
+    "settings": [
+      {}
+    ]
+  }
+}

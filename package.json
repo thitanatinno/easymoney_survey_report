@@ -1,0 +1,24 @@
+{
+  "name": "kobo-excel-report",
+  "version": "1.0.0",
+  "description": "Node.js API to generate Excel reports from KoboToolbox submissions",
+  "type": "module",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "keywords": ["kobo", "excel", "report", "exceljs"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "exceljs": "^4.4.0",
+    "axios": "^1.6.5",
+    "dotenv": "^16.4.1",
+    "image-size": "^1.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
