@@ -1,10 +1,12 @@
 import { fetchSubmission, fetchAllSubmissions } from '../services/kobo.service.js';
-import { generateExcelReport } from '../services/report.service.js';
+import { routeToForm } from '../services/form.router.js';
 import { normalizeSubmission } from '../utils/normalizeSubmission.js';
 
 /**
  * Controller for generating Excel report
  * GET /generate/:uid/:id
+ * 
+ * Updated to use form routing system - automatically selects the correct form handler based on UID
  */
 export async function generateReport(req, res, next) {
   try {
@@ -24,14 +26,15 @@ export async function generateReport(req, res, next) {
     console.log(`Submission ID: ${id}`);
     console.log('='.repeat(60));
 
-    // Step 1: Fetch submission from Kobo
-    console.log('\n⏳ Step 1: Fetching submission from KoboToolbox...');
-    const submission = await fetchSubmission(uid, id);
+    // Route to appropriate form handler and generate report
+    console.log('\n⏳ Routing to form handler...');
+    const buffer = await routeToForm(uid, id);
 
-    // Step 2: Extract site name for filename
-    console.log('\n⏳ Step 2: Extracting site information...');
+    // Extract site name for filename (form-agnostic approach)
+    console.log('\n⏳ Preparing file download...');
+    const submission = await fetchSubmission(uid, id);
     const normalizedData = normalizeSubmission(submission);
-    const siteName = normalizedData.general.siteName || 'unknown_site';
+    const siteName = normalizedData.general?.siteName || normalizedData.basicInfo?.siteName || 'unknown_site';
     
     // Sanitize site name for safe filename (remove invalid characters)
     const sanitizedSiteName = siteName
@@ -41,11 +44,7 @@ export async function generateReport(req, res, next) {
     
     const filename = `report_${sanitizedSiteName}.xlsx`;
 
-    // Step 3: Generate Excel report
-    console.log('\n⏳ Step 3: Generating Excel report...');
-    const buffer = await generateExcelReport(submission);
-
-    // Step 4: Send as direct browser download
+    // Send as direct browser download
     console.log('\n✅ SUCCESS!');
     console.log(`📄 Report generated: ${filename}`);
     console.log(`📦 File size: ${(buffer.length / 1024).toFixed(2)} KB`);

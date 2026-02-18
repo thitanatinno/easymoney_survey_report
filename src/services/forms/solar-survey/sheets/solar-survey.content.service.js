@@ -1,11 +1,13 @@
-import { mergeAndWrite, writeRow } from '../../utils/excel/helpers.js';
+import { mergeAndWrite, writeRow } from '../../../../utils/excel/helpers.js';
 
 /**
  * Renders Content Sheet (Table of Contents)
  * @param {Object} worksheet - ExcelJS worksheet
  * @param {Object} data - Normalized data
+ * @param {Object} attachmentMaps - Attachment maps
+ * @param {Object} workbook - ExcelJS workbook
  */
-export function renderContentSheet(worksheet, data) {
+export function renderContentSheet(worksheet, data, attachmentMaps, workbook) {
   const { general } = data;
 
   // Set column widths

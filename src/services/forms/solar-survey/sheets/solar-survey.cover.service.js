@@ -1,4 +1,4 @@
-import { mergeAndWrite, writeRow } from '../../utils/excel/helpers.js';
+import { mergeAndWrite, writeRow } from '../../../../utils/excel/helpers.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
@@ -9,11 +9,12 @@ const __dirname = path.dirname(__filename);
 /**
  * Renders Cover Sheet
  * @param {Object} worksheet - ExcelJS worksheet
- * @param {Object} workbook - ExcelJS workbook
  * @param {Object} data - Normalized data
+ * @param {Object} attachmentMaps - Attachment maps
+ * @param {Object} workbook - ExcelJS workbook
  */
 
-export async function renderCoverSheet(worksheet, workbook, data) {
+export async function renderCoverSheet(worksheet, data, attachmentMaps, workbook) {
   const { general, meta } = data;
   // Set column widths
   worksheet.getColumn(1).width = 2;
@@ -30,7 +31,7 @@ export async function renderCoverSheet(worksheet, workbook, data) {
   let currentRow = 2;
 
   // Add INNO logo (only if file exists)
-  const logoPath = path.join(__dirname, '../../../assets/inno-logo.png');
+  const logoPath = path.join(__dirname, '../../../../assets/inno-logo.png');
   if (fs.existsSync(logoPath)) {
     try {
       const logoId = workbook.addImage({

@@ -1,13 +1,15 @@
-import { mergeAndWrite, writeRow, setColumnWidths, drawTableGrid } from '../../utils/excel/helpers.js';
-import { headerStyle, cellStyle, sectionHeaderStyle } from '../../utils/excel/styles.js';
-import { setYesNoCheckbox, setCheckboxForValue } from '../../utils/excel/checkbox.js';
+import { mergeAndWrite, writeRow, setColumnWidths, drawTableGrid } from '../../../../utils/excel/helpers.js';
+import { headerStyle, cellStyle, sectionHeaderStyle } from '../../../../utils/excel/styles.js';
+import { setYesNoCheckbox, setCheckboxForValue } from '../../../../utils/excel/checkbox.js';
 
 /**
  * Renders Sheet 1: General Data + Building Data
  * @param {Object} worksheet - ExcelJS worksheet
  * @param {Object} data - Normalized data
+ * @param {Object} attachmentMaps - Attachment maps
+ * @param {Object} workbook - ExcelJS workbook
  */
-export function renderSheet1(worksheet, data) {
+export function renderSheet1(worksheet, data, attachmentMaps, workbook) {
   const { general, building } = data;
 
   // Set column widths

@@ -1,19 +1,19 @@
-import { setColumnWidths, mergeAndWrite } from '../../utils/excel/helpers.js';
-import { sectionHeaderStyle } from '../../utils/excel/styles.js';
-import { addImageBlock, getImageExtension } from '../../utils/excel/images.js';
-import { resolveAttachment } from '../../utils/attachments.js';
-import { downloadImage } from '../kobo.service.js';
+import { setColumnWidths, mergeAndWrite } from '../../../../utils/excel/helpers.js';
+import { sectionHeaderStyle } from '../../../../utils/excel/styles.js';
+import { addImageBlock, getImageExtension } from '../../../../utils/excel/images.js';
+import { resolveAttachment } from '../../../../utils/attachments.js';
+import { downloadImage } from '../../../kobo.service.js';
 
 /**
  * Renders Sheet 6: Customer MDB/MDP Images + Electrical Room
  * Shows electrical room, SLD, CT, Tie-In, and Router images in bordered blocks
  * 
  * @param {Object} worksheet - ExcelJS worksheet
- * @param {Object} workbook - ExcelJS workbook
  * @param {Object} data - Normalized data
  * @param {Object} attachmentMaps - Attachment maps
+ * @param {Object} workbook - ExcelJS workbook
  */
-export async function renderSheet5(worksheet, workbook, data, attachmentMaps) {
+export async function renderSheet5(worksheet, data, attachmentMaps, workbook) {
   const { customerMDP } = data;
 
   // Set column widths
@@ -78,7 +78,7 @@ export async function renderSheet5(worksheet, workbook, data, attachmentMaps) {
       }
     }
 
-    currentRow = addImageBlock(worksheet, workbook, imageBuffer, currentRow, 1, 6, '7.3 มี Single line diagram (SLD)   (ถ้ามีเแนบภาพประกอบ)', imageExt);
+    currentRow = addImageBlock(worksheet, workbook, imageBuffer, currentRow, 1, 6, '7.3 มี Single line diagram (SLD)   (ถ้ามีเเนบภาพประกอบ)', imageExt);
     currentRow += 1;
   }
 

@@ -1,19 +1,19 @@
-import { setColumnWidths, mergeAndWrite } from '../../utils/excel/helpers.js';
-import { sectionHeaderStyle } from '../../utils/excel/styles.js';
-import { addImageBlock, getImageExtension } from '../../utils/excel/images.js';
-import { resolveAttachment } from '../../utils/attachments.js';
-import { downloadImage } from '../kobo.service.js';
+import { setColumnWidths, mergeAndWrite } from '../../../../utils/excel/helpers.js';
+import { sectionHeaderStyle } from '../../../../utils/excel/styles.js';
+import { addImageBlock, getImageExtension } from '../../../../utils/excel/images.js';
+import { resolveAttachment } from '../../../../utils/attachments.js';
+import { downloadImage } from '../../../kobo.service.js';
 
 /**
  * Renders Sheet 6: Building Exterior & Grid Connection Images
  * Shows building facade, parking, orientation, and PEA/MEA meter images
  * 
  * @param {Object} worksheet - ExcelJS worksheet
- * @param {Object} workbook - ExcelJS workbook
  * @param {Object} data - Normalized data
  * @param {Object} attachmentMaps - Attachment maps
+ * @param {Object} workbook - ExcelJS workbook
  */
-export async function renderSheet6(worksheet, workbook, data, attachmentMaps) {
+export async function renderSheet6(worksheet, data, attachmentMaps, workbook) {
   const { building } = data;
 
   // Set column widths

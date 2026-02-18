@@ -1,12 +1,14 @@
-import { mergeAndWrite, writeRow, setColumnWidths } from '../../utils/excel/helpers.js';
-import { headerStyle, cellStyle, sectionHeaderStyle } from '../../utils/excel/styles.js';
+import { mergeAndWrite, writeRow, setColumnWidths } from '../../../../utils/excel/helpers.js';
+import { headerStyle, cellStyle, sectionHeaderStyle } from '../../../../utils/excel/styles.js';
 
 /**
  * Renders Sheet 3: Customer MDP/LP Data
  * @param {Object} worksheet - ExcelJS worksheet
  * @param {Object} data - Normalized data
+ * @param {Object} attachmentMaps - Attachment maps
+ * @param {Object} workbook - ExcelJS workbook
  */
-export function renderSheet3(worksheet, data) {
+export function renderSheet3(worksheet, data, attachmentMaps, workbook) {
   const { customerMDP } = data;
 
   // Set column widths

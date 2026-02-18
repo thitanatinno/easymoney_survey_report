@@ -1,19 +1,19 @@
-import { setColumnWidths, mergeAndWrite } from '../../utils/excel/helpers.js';
-import { sectionHeaderStyle } from '../../utils/excel/styles.js';
-import { addImageBlock, getImageExtension } from '../../utils/excel/images.js';
-import { buildRepeatXPath, resolveAttachment } from '../../utils/attachments.js';
-import { downloadImage } from '../kobo.service.js';
+import { setColumnWidths, mergeAndWrite } from '../../../../utils/excel/helpers.js';
+import { sectionHeaderStyle } from '../../../../utils/excel/styles.js';
+import { addImageBlock, getImageExtension } from '../../../../utils/excel/images.js';
+import { buildRepeatXPath, resolveAttachment } from '../../../../utils/attachments.js';
+import { downloadImage } from '../../../kobo.service.js';
 
 /**
  * Renders Sheet 5: Routeline & Roof Images
  * Shows route line items and roof/solar installation area images
  * 
  * @param {Object} worksheet - ExcelJS worksheet
- * @param {Object} workbook - ExcelJS workbook
  * @param {Object} data - Normalized data
  * @param {Object} attachmentMaps - Attachment maps
+ * @param {Object} workbook - ExcelJS workbook
  */
-export async function renderSheet4(worksheet, workbook, data, attachmentMaps) {
+export async function renderSheet4(worksheet, data, attachmentMaps, workbook) {
   const { routeline, combiner } = data;
 
   // Set column widths - using 6 columns for wide layout
